@@ -14,15 +14,28 @@
 .navigation-link-item:hover::before{
     width:100%;
 }
-@media(min-width:992px){
- .navigation-link-item::before{
-    <!-- left:0;
-    bottom:0;
-    width:0;
-    height:2px; -->
- }
-}
 
+.hero-section::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: #301934;
+z-index:1;
+}
+.hero-section::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:30%;
+background: linear-gradient(180deg, #0B0021 0%, rgba(11, 0, 33, 0) 91.76%);
+opacity: 0.56;
+z-indedx:2;
+}
 
 @media(max-width:991px){
     .navigation-link-item::before{
