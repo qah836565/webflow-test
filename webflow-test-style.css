@@ -5,11 +5,10 @@
     bottom:0;
     width:0;
     height:2px;
-    background:var(color-yellow);
+    background:var(--color-yellow);
     transition:all 0.3s ease-in-out;
 }
 .navigation-link-item:hover::before{
     width:100%;
 }
-
 
