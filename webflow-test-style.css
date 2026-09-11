@@ -13,9 +13,21 @@
 .navigation-link-item:hover::before{
     width:100%;
 }
+@media(min-width:992px){
+ .navigation-link-item::before{
+    <!-- left:0;
+    bottom:0;
+    width:0;
+    height:2px; -->
+ }
+}
+
 
 @media(max-width:991px){
-    navigation-link-item::before{
+    .navigation-link-item::before{
+        top:0;
+        left:0;
+        bottom:auto;
         height:100%;
         width:2px;
     }
