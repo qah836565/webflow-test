@@ -34,7 +34,7 @@ z-index:1;
     height:30%;
 background: linear-gradient(180deg, #0B0021 0%, rgba(11, 0, 33, 0) 91.76%);
 opacity: 0.56;
-z-indedx:2;
+z-index:2;
 }
 .hero-main-video::before{
     content:"";
