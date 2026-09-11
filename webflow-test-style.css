@@ -15,7 +15,7 @@
     width:100%;
 }
 
-.hero-section::before{
+<!-- .hero-section::before{
 content:"";
 position:absolute;
 top:0;
@@ -24,7 +24,7 @@ width:100%;
 height:100%;
 background: #301934;
 z-index:1;
-}
+} -->
 .hero-section::after{
     content:"";
     position:absolute;
@@ -49,7 +49,7 @@ z-index:1;
 }
 
 .cmn-btn-purple:hover .cmn-btn-purple-txt{
-    color:var(--color-purple);
+    color:var(--color-yellow);
 }
 
 @media(max-width:991px){
