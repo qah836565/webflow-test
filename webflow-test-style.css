@@ -70,3 +70,7 @@ z-index:1;
     width:100%;
 }
 }
+@media(min-width:992px) and @media(max-width:1439px){
+    .achievment-list .achievment-list-item:nth-child(2n+1){
+        border-right:none;
+}
