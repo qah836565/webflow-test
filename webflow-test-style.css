@@ -51,7 +51,13 @@ z-index:1;
 .cmn-btn-purple:hover .cmn-btn-purple-txt{
     color:var(--color-yellow);
 }
-
+.achievment-list .achievment-list-item:first-child{
+    padding-left:0;
+}
+.achievment-list .achievment-list-item:last-child{
+    padding-right:0;
+    border-right:none;
+}
 @media(max-width:991px){
     .navigation-link-item::before{
         top:0;
