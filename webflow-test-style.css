@@ -65,6 +65,16 @@ z-index:1;
 .footer-top-content>*:last-child{
     margin-bottom:0;
 }
+.ftr-btm-other-list-item:not(:last-child)::before{
+content:";
+    position:absolute;
+    right:0;
+    top:50%;
+    transfoprm:translateY(-50%);
+    width:1px;
+    height:25px;
+    background:#A8A8A8;
+}
 
 
 @media(min-width:992px) and (max-width:1439px){
