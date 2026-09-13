@@ -58,6 +58,14 @@ z-index:1;
     padding-right:0;
     border-right:none;
 }
+
+@media(min-width:992px) and (max-width:1439px){
+    .achievment-list .achievment-list-item:nth-child(3n+3){
+        border-right:none;
+    }
+}
+
+
 @media(max-width:991px){
     .navigation-link-item::before{
         top:0;
@@ -82,8 +90,4 @@ z-index:1;
         border-right:none;
     }
 }
-@media(min-width:992px) and (max-width:1439px){
-    .achievment-list .achievment-list-item:nth-child(3n+2){
-        border-right:none;
-    }
-}
+
