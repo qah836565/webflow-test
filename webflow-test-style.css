@@ -59,6 +59,10 @@ z-index:1;
     border-right:none;
 }
 
+.email-subscription-form >*:last-child{
+    margin-bottom:0;
+}
+
 @media(min-width:992px) and (max-width:1439px){
     .achievment-list .achievment-list-item:nth-child(3n+3){
         border-right:none;
