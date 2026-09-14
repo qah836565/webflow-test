@@ -83,7 +83,7 @@ content:";
     box-shadow:none;
 }
 
-.hero-bg-img-wrp::before{
+.hero-new::before{
     content:"";
     left:0;
     bottom:0;
