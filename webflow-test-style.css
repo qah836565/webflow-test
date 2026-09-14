@@ -96,26 +96,7 @@ content:";
 .step-col:last-child .step-card .step-arr{
     display:none;
 }
-.step-col::before{
-    content:"";
-    position:absolute;
-    top:81px;
-    left:0;
-    width:50%;
-    height:1px ;
-    border:1px dashed rgba(130, 56,179, 0.24);
-    z-index:1;
-}
-.step-col::after{
-    content:"";
-    position:absolute;
-    top:81px;
-    right:0;
-    width:50%;
-    height:1px ;
-    border:1px dashed rgba(130, 56,179, 0.24);
-     z-index:1;
-}
+
 
 @media(min-width:768px) and (max-width:991px){
 .achievment-list .achievment-list-item:nth-child(3n+3){
