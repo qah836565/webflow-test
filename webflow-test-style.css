@@ -79,12 +79,11 @@ content:";
     background-color:var(--color-purple);
 }
 
-@media(min-width:992px) and (max-width:1439px){
+/* @media(min-width:992px) and (max-width:1439px){
     .achievment-list .achievment-list-item:nth-child(3n+3){
         border-right:none;
     }
-}
-
+} */
 
 @media(max-width:991px){
     .navigation-link-item::before{
@@ -103,6 +102,9 @@ content:";
 .achievment-list .achievment-list-item:last-child{
     padding-right:15px;
 }
+    .achievment-list .achievment-list-item:nth-child(3n+3){
+        border-right:none;
+    }
 }
 
 @media(max-width:767px){
