@@ -97,7 +97,9 @@ content:";
 .step-col:last-child .step-card .step-arr{
     display:none;
 }
-
+.cmn-cont p:last-child{
+    margin-bottom:0;
+}
 
 @media(min-width:768px) and (max-width:991px){
 .achievment-list .achievment-list-item:nth-child(3n+3){
