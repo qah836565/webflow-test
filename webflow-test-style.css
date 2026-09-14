@@ -82,6 +82,17 @@ content:";
 .w-checkbox-input--inputType-custom.w--redirected-focus {
     box-shadow:none;
 }
+
+.hero-bg-img-wrp::before{
+    content:"";
+    left:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(180deg, #0B0021 60.5%, rgba(11, 0, 33, 0) 98.68%);
+    z-index:1;
+}
+    
 /* @media(min-width:992px) and (max-width:1439px){
     .achievment-list .achievment-list-item:nth-child(3n+3){
         border-right:none;
