@@ -77,6 +77,7 @@ content:";
 }
 .w-checkbox-input--inputType-custom.w--redirected-checked {
     background-color:var(--color-purple);
+    border:1px solid var(--color-purple);
 }
 
 /* @media(min-width:992px) and (max-width:1439px){
