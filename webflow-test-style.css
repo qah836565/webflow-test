@@ -79,7 +79,9 @@ content:";
     background-color:var(--color-purple);
     border:1px solid var(--color-purple);
 }
-
+.w-checkbox-input--inputType-custom.w--redirected-focus {
+    box-shadow:none;
+}
 /* @media(min-width:992px) and (max-width:1439px){
     .achievment-list .achievment-list-item:nth-child(3n+3){
         border-right:none;
