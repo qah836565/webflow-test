@@ -154,10 +154,10 @@ content:";
 .faq-box.faq-open .faq-title-h3{
     color:var(--color-heading);
 }
-.faq-box.faq-open::before{
+.faq-box.faq-open .faq-arr::before{
     display:none;
 }
-.faq-box.faq-open::after{
+.faq-box.faq-open .faq-arr::after{
     background:#D7AC28;
 }
 .faq-box:has(+ .faq-open) {
