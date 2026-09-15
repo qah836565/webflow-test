@@ -151,7 +151,7 @@ content:";
     background:var(--color-white);
     border-bottom:none;
 }
-.faq-box.faq-open .faq-title{
+.faq-box.faq-open .faq-title-h3{
     color:var(--color-heading);
 }
 .faq-box.faq-open::before{
@@ -159,6 +159,9 @@ content:";
 }
 .faq-box.faq-open::after{
     background:#D7AC28;
+}
+.faq-box:has(+ .faq-open) {
+   border-bottom:none;
 }
 
 @media(min-width:768px) and (max-width:991px){
