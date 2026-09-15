@@ -103,7 +103,9 @@ content:";
 .yellow-circle-btn:hover .yellow-circle-btn-inr{
     background:var(--color-yellow);
 }
-
+.yellow-circle-btn:hover .yellow-circle-btn-inr img.univ-sld-btn-img{
+   filter: brightness(0) saturate(100%) invert(17%) sepia(16%) saturate(6470%) hue-rotate(254deg) brightness(95%) contrast(136%);
+}
 
 @media(min-width:768px) and (max-width:991px){
 .achievment-list .achievment-list-item:nth-child(3n+3){
