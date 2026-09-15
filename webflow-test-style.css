@@ -120,8 +120,46 @@ content:";
     height:auto !important;
 }
 
+.faq-arr::before{
+    content:"";
+    
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    height:100%;
+    width:2px;
+    background:var(--color-white);
+}
+.faq-arr::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    height:2px;
+    width:100%;
+    background:var(--color-white);
+}    
 
-
+.faq-arr::before, .faq-arr::after{
+    display:block;
+    transition:all 0.3s esae-in-out;
+}
+.faq-box.faq-active{
+    border-radius:24px;
+    background:var(--color-white);
+    border-bottom:none;
+}
+.faq-box.faq-active .faq-title{
+    color:var(--color-heading);
+}
+.faq-box.faq-active::before{
+    display:none;
+}
+.faq-box.faq-active::after{
+    background:#D7AC28;
+}
 
 @media(min-width:768px) and (max-width:991px){
 .achievment-list .achievment-list-item:nth-child(3n+3){
