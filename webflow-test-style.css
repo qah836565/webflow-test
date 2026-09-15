@@ -107,6 +107,19 @@ content:";
    filter: brightness(0) saturate(100%) invert(17%) sepia(16%) saturate(6470%) hue-rotate(254deg) brightness(95%) contrast(136%);
 }
 
+.university-slider .slick-list{
+    margin:0 -12px;
+}
+.university-slider .slick-track{
+    display:flex !important;
+}
+.university-slider .slide-item{
+    height:auto !important;
+}
+
+
+
+
 @media(min-width:768px) and (max-width:991px){
 .achievment-list .achievment-list-item:nth-child(3n+3){
         border-right:none;
