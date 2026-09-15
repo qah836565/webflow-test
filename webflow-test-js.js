@@ -79,3 +79,18 @@
     }
 
 })();
+
+if ($(".faq-list").length) {
+        $(".faq-box:first-child").addClass("faq-open");
+        $(".faq-box").each(function () {
+            if ($(this).hasClass("faq-open")) {
+                $(this).find(".faq-btn").next(".faq-panel").show();
+            }
+        });
+        $(".faq-btn").on("click", function () {
+            $(this).parent().toggleClass("faq-open");
+            $(this).next(".faq-panel").stop(true, true).slideToggle();
+            $(this).parent().siblings().removeClass("faq-open");
+            $(this).parent().siblings().find(".faq-panel").slideUp();
+        });
+    }
