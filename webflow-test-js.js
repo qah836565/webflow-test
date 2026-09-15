@@ -1,31 +1,41 @@
 (function () {
 
-    // Check if jQuery is available
+    // ========================================
+    // SLICK CDN
+    // ========================================
+
     if (typeof jQuery === 'undefined') {
         console.error('jQuery is not available.');
         return;
     }
 
-    // If Slick is already loaded, initialize directly
+
+    // ========================================
+    // LOAD SLICK
+    // ========================================
+
     if (typeof jQuery.fn.slick === 'function') {
+
         initSliders();
-        return;
+
+    } else {
+
+        var slickScript = document.createElement('script');
+
+        slickScript.src =
+            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
+
+        slickScript.onload = function () {
+            initSliders();
+        };
+
+        slickScript.onerror = function () {
+            console.error('Slick JS failed to load.');
+        };
+
+        document.head.appendChild(slickScript);
     }
 
-    // Load Slick JS
-    var slickScript = document.createElement('script');
-
-    slickScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
-
-    slickScript.onload = function () {
-        initSliders();
-    };
-
-    slickScript.onerror = function () {
-        console.error('Slick JS failed to load.');
-    };
-
-    document.head.appendChild(slickScript);
 
 
     // ============================
@@ -78,9 +88,9 @@
 
     }
 
-})();
 
-if ($(".faq-list").length) {
+    // faq functionality //
+    if ($(".faq-list").length) {
         $(".faq-box:first-child").addClass("faq-open");
         $(".faq-box").each(function () {
             if ($(this).hasClass("faq-open")) {
@@ -94,3 +104,8 @@ if ($(".faq-list").length) {
             $(this).parent().siblings().find(".faq-panel").slideUp();
         });
     }
+
+    
+
+})();
+
