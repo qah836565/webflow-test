@@ -1,46 +1,81 @@
-var script = document.createElement('script');
-script.src = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
+(function () {
 
-script.onload = function () {
-    // Your Slick code here
+    // Check if jQuery is available
+    if (typeof jQuery === 'undefined') {
+        console.error('jQuery is not available.');
+        return;
+    }
 
-    var $universitySlider = $('.university-slider');
-    var $progress = $('.univ-sld-progress-bar .univ-sld-progress-fill');
+    // If Slick is already loaded, initialize directly
+    if (typeof jQuery.fn.slick === 'function') {
+        initSliders();
+        return;
+    }
 
-    $universitySlider.on('init beforeChange', function (e, slick, _, next) {
-        var i = e.type === 'init' ? 0 : next;
-        $progress.width(((i + 1) / slick.slideCount) * 100 + '%');
-    });
+    // Load Slick JS
+    var slickScript = document.createElement('script');
 
-    $universitySlider.slick({
-        dots: false,
-        infinite: true,
-        arrows: true,
-        prevArrow: '.univ-sld-btn-left',
-        nextArrow: '.univ-sld-btn-right',
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    });
-};
+    slickScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
 
-document.head.appendChild(script);
+    slickScript.onload = function () {
+        initSliders();
+    };
+
+    slickScript.onerror = function () {
+        console.error('Slick JS failed to load.');
+    };
+
+    document.head.appendChild(slickScript);
 
 
+    // ============================
+    // YOUR SLICK CODE
+    // ============================
+
+    function initSliders() {
+
+        var $universitySlider = $('.university-slider');
+        var $progress = $('.univ-sld-progress-bar .univ-sld-progress-fill');
 
 
-    
+        if (!$universitySlider.length) {
+            return;
+        }
+
+
+        // Progress bar
+        $universitySlider.on('init beforeChange', function (e, slick, currentSlide, nextSlide) {
+
+            var i = e.type === 'init' ? 0 : nextSlide;
+
+            $progress.width(
+                ((i + 1) / slick.slideCount) * 100 + '%'
+            );
+
+        });
+
+
+        // Slick initialization
+        $universitySlider.slick({
+
+            dots: false,
+
+            infinite: true,
+
+            arrows: true,
+
+            prevArrow: '.univ-sld-btn-left',
+
+            nextArrow: '.univ-sld-btn-right',
+
+            speed: 500,
+
+            slidesToShow: 3,
+
+            slidesToScroll: 1
+
+        });
+
+    }
+
+})();
