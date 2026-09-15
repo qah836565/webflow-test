@@ -224,12 +224,16 @@ content:";
      .faq-box.faq-open{
     border-radius:18px;
     }
+    .ftr-cmn-textarea.w-input{
+        height:106px;
+    }
 }
 
 @media(max-width:767px){
     .achievment-list .achievment-list-item:nth-child(2n+2){
         border-right:none;
     }
+    
 }
 
 @media(max-width:575px){
