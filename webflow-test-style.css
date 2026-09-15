@@ -147,7 +147,7 @@ content:";
     transition:all 0.3s ease-in-out;
 }
 .faq-box.faq-open{
-    border-radius:24px;
+   
     background:var(--color-white);
     border-bottom:none;
 }
@@ -165,15 +165,24 @@ content:";
 }
 
 
-
 @media(min-width:1440px){
     .step-dotted-line {
     top: 27.4%;
     }
+}
 @media(min-width:1280px){
     .step-dotted-line {
     top: 26.2%;
     }
+    .faq-box.faq-open{
+    border-radius:24px;
+    }
+}
+@media(min-width:1280px){
+     .faq-box.faq-open{
+    border-radius:18px;
+    }
+}
     
 @media(min-width:768px) and (max-width:991px){
 .achievment-list .achievment-list-item:nth-child(3n+3){
