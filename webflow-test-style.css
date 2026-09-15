@@ -178,9 +178,12 @@ content:";
     border-radius:24px;
     }
 }
-@media(min-width:1280px){
+@media(min-width:992px){
      .faq-box.faq-open{
     border-radius:18px;
+    }
+    .ftr-cmn-textarea.w-input{
+        height:106px;
     }
 }
     
