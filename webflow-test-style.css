@@ -110,9 +110,7 @@ content:";
    filter: brightness(0) saturate(100%) invert(17%) sepia(16%) saturate(6470%) hue-rotate(254deg) brightness(95%) contrast(136%);
 }
 
-.university-slider .slick-list{
-    margin:0 -12px;
-}
+
 .university-slider .slick-track{
     display:flex !important;
 }
@@ -181,6 +179,9 @@ content:";
     .faq-box.faq-open{
     border-radius:24px;
     }
+    .university-slider .slick-list{
+    margin:0 -12px;
+}
 }
 @media(min-width:992px){
     .step-dotted-line {
@@ -192,6 +193,9 @@ content:";
     .ftr-cmn-textarea.w-input{
         height:106px;
     }
+    .university-slider .slick-list{
+    margin:0 -8px;
+}
 }
     
 @media(min-width:768px) and (max-width:991px){
