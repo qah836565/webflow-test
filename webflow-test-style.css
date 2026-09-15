@@ -179,6 +179,9 @@ content:";
     }
 }
 @media(min-width:992px){
+    .step-dotted-line {
+    top: 24%;
+    }
      .faq-box.faq-open{
     border-radius:18px;
     }
