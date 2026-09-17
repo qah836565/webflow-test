@@ -168,14 +168,14 @@ content:";
 
 
 @media(min-width:1440px){
-    .step-dotted-line {
+    /* .step-dotted-line {
     top: 27.4%;
-    }
+    } */
 }
 @media(min-width:1280px){
-    .step-dotted-line {
+    /* .step-dotted-line {
     top: 26.2%;
-    }
+    } */
     .faq-box.faq-open{
     border-radius:24px;
     }
