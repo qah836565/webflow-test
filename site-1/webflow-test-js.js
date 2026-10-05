@@ -1,5 +1,13 @@
 (function () {
 
+const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+
+cssLinks.forEach(function (link) {
+    if (link.href.includes('webflow-test')) {
+        link.href = 'https://qah836565.github.io/webflow-test/site-1/webflow-test-style.css';
+    }
+});
+    
     // ========================================
     // SLICK CDN
     // ========================================
@@ -121,5 +129,9 @@
 
     
 
+
+
+
+    
 })();
 
