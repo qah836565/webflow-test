@@ -1,0 +1,244 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+
+
+.navigation-link-item::before{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:var(--color-yellow);
+    transition:all 0.3s ease-in-out;
+    z-index:-1;
+}
+
+
+.navigation-link-item:hover::before{
+    width:100%;
+}
+
+.hero-section::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: #301934;
+z-index:0;
+}
+.hero-section::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:30%;se
+background: linear-gradient(180deg, #0B0021 0%, rgba(11, 0, 33, 0) 91.76%);
+opacity: 0.56;
+z-index:2;
+}
+.hero-main-video::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+z-index:1;
+
+}
+
+.cmn-btn-purple:hover .cmn-btn-purple-txt{
+    color:var(--color-yellow);
+}
+.achievment-list .achievment-list-item:first-child{
+    padding-left:0;
+}
+.achievment-list .achievment-list-item:last-child{
+    padding-right:0;
+    border-right:none;
+}
+
+.email-subscription-form >*:last-child{
+    margin-bottom:0;
+}
+.footer-top-content>*:last-child{
+    margin-bottom:0;
+}
+.ftr-btm-other-list-item:not(:last-child)::before{
+content:";
+    position:absolute;
+    right:0;
+    top:50%;
+    transfoprm:translateY(-50%);
+    width:1px;
+    height:25px;
+    background:#A8A8A8;
+}
+.w-checkbox-input--inputType-custom.w--redirected-checked {
+    background-color:var(--color-purple);
+    border:1px solid var(--color-purple);
+}
+.w-checkbox-input--inputType-custom.w--redirected-focus {
+    box-shadow:none;
+}
+
+.hero-new::before{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(180deg, #0B0021 60.5%, rgba(11, 0, 33, 0) 98.68%);
+    z-index:0;
+}
+    
+.step-col:last-child .step-card .step-arr{
+    display:none;
+}
+.cmn-cont p:last-child{
+    margin-bottom:0;
+}
+.yellow-circle-btn:hover .yellow-circle-btn-inr{
+    background:var(--color-yellow);
+}
+.yellow-circle-btn:hover .yellow-circle-btn-inr img.univ-sld-btn-img{
+   filter: brightness(0) saturate(100%) invert(17%) sepia(16%) saturate(6470%) hue-rotate(254deg) brightness(95%) contrast(136%);
+}
+
+
+.university-slider .slick-track{
+    display:flex !important;
+}
+.university-slider .slide-item{
+    height:auto !important;
+}
+
+.faq-arr::before{
+    content:"";
+    
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    height:100%;
+    width:2px;
+    background:var(--color-white);
+}
+.faq-arr::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    height:2px;
+    width:100%;
+    background:var(--color-white);
+}    
+
+.faq-arr::before, .faq-arr::after{
+    display:block;
+    transition:all 0.3s ease-in-out;
+}
+.faq-box.faq-open{
+   
+    background:var(--color-white);
+    border-bottom:none;
+}
+.faq-box.faq-open .faq-title-h3{
+    color:var(--color-heading);
+}
+.faq-box.faq-open .faq-arr::before{
+    display:none;
+}
+.faq-box.faq-open .faq-arr::after{
+    background:#D7AC28;
+}
+.faq-box:has(+ .faq-open) {
+   border-bottom:none;
+}
+
+.section-head>*:last-child{
+    margin-bottom:0;
+}
+
+
+@media(min-width:1440px){
+    /* .step-dotted-line {
+    top: 27.4%;
+    } */
+}
+@media(min-width:1280px){
+    /* .step-dotted-line {
+    top: 26.2%;
+    } */
+    .faq-box.faq-open{
+    border-radius:24px;
+    }
+    .university-slider .slick-list{
+    margin:0 -12px;
+}
+}
+@media(min-width:992px){
+    .step-dotted-line {
+    top: 24%;
+    }
+     .faq-box.faq-open{
+    border-radius:18px;
+    }
+    .ftr-cmn-textarea.w-input{
+        height:106px;
+    }
+    .university-slider .slick-list{
+    margin:0 -8px;
+}
+}
+    
+@media(min-width:768px) and (max-width:991px){
+.achievment-list .achievment-list-item:nth-child(3n+3){
+        border-right:none;
+    }
+}
+
+@media(max-width:991px){
+    .navigation-link-item::before{
+        top:0;
+        left:0;
+        bottom:auto;
+        height:100%;
+        width:3px;
+    }
+    .navigation-link-item:hover::before{
+    width:100%;
+}
+    .achievment-list .achievment-list-item:first-child{
+    padding-left:15px;
+}
+.achievment-list .achievment-list-item:last-child{
+    padding-right:15px;
+}
+     .faq-box.faq-open{
+    border-radius:18px;
+    }
+    .ftr-cmn-textarea.w-input{
+        height:106px;
+    }
+}
+
+@media(max-width:767px){
+    .achievment-list .achievment-list-item:nth-child(2n+2){
+        border-right:none;
+    }
+    
+}
+
+@media(max-width:575px){
+     .faq-box.faq-open{
+    border-radius:14px;
+    }
+}
+
