@@ -187,6 +187,10 @@ content:";
     background:#4B7E33;
 }
 
+.read-more-btn:hover img{
+    filter:brightness(0)invert(1);
+}
+
 
 @media(min-width:1440px){
     /* .step-dotted-line {
