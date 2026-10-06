@@ -194,6 +194,10 @@ content:";
     margin-bottom:0;
 }
 
+.service-details-item{
+    display:none;
+}
+
 @media(min-width:1440px){
     /* .step-dotted-line {
     top: 27.4%;
