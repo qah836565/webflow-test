@@ -121,6 +121,21 @@
         });
     }
 
+
+    servicetablinks = document.querySelectorAll('.service-tab-link');
+    servicetabs = document.querySelectorAll('.service-details-item');
+
+    servicetablinks.forEach((link, i) => {
+        link.addEventListener('click', function () {
+            servicetabs.forEach((tab, j) => {
+                if (i === j) {
+                    tab.classList.add('servicetab-active');
+                }
+            });
+        });
+
+    });
+
     
 
 
