@@ -190,7 +190,9 @@ content:";
 .read-more-btn:hover img{
     filter:brightness(0)invert(1);
 }
-
+.service-list-item>*:last-child{
+    margin-bottom:0;
+}
 
 @media(min-width:1440px){
     /* .step-dotted-line {
