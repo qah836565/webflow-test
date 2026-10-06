@@ -194,8 +194,11 @@ content:";
     margin-bottom:0;
 }
 
-.service-details-item{
+.service-list-item-panel, .service-details-item{
     display:none;
+}
+.service-list-item-panel.service-active, .service-details-item.service-active{
+    display:block;
 }
 
 @media(min-width:1440px){
