@@ -157,6 +157,33 @@ $(".service-category-collection-list-item:first-child").addClass("faq-open");
         });
 
 
+
+
+
+const serviceLinks = document.querySelectorAll('.service-list-item-panel-item');
+const serviceDetails = document.querySelectorAll('.service-details-item');
+
+serviceLinks.forEach( (link) => {
+
+    link.addEventListener('click', function () {
+
+        const attr = this.getAttribute('data-service');
+        const serviceDetail = serviceDetails.find(function (elem) {
+            return elem.getAttribute('data-service') === attr;
+        });
+
+        serviceDetails.forEach(function (elem) {
+            elem.classList.remove('service-details-active');
+        });
+
+        if (serviceDetail) {
+            serviceDetail.classList.add('service-details-active');
+        }
+
+    });
+
+});
+
 // document end //
 });
 
