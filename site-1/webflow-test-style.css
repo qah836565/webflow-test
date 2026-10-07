@@ -197,7 +197,9 @@ content:"";
 /* .service-list-item-panel, .service-details-item{
     display:none;
 } */
- 
+ .service-details-item{
+    display:none;
+ }
 
 .service-tab-link.service-active .service-list-item-panel-item-txt{
    color:#4B7E33;
