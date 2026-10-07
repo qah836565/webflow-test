@@ -104,6 +104,10 @@
 
     }
 
+
+})();
+
+
 $(document).ready(function () {
 
     
@@ -142,12 +146,4 @@ if ($(".service-category-collection-list").length) {
 
     
 });
-
-    
-
-
-
-
-    
-})();
 
