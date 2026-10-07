@@ -194,9 +194,10 @@ content:"";
     margin-bottom:0;
 }
 
-.service-list-item-panel, .service-details-item{
+/* .service-list-item-panel, .service-details-item{
     display:none;
-}
+} */
+ 
 .service-list-item-panel.service-active, .service-details-item.service-active{
     display:block;
 }
@@ -206,7 +207,7 @@ content:"";
 .service-category-collection-list-item.faq-open .service-list-item-hd .service-list-item-title{
     color:#4B7E33;
 }
-.service-category-collection-list-item.faq-open .service-list-item-hd  .serv-list-item-arr:after{
+.service-category-collection-list-item.faq-open .service-list-item-hd-outer  .serv-list-item-arr:after{
 
    display: none;
 }
