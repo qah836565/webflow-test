@@ -136,11 +136,11 @@ cssLinks.forEach(function (link) {
 
 $(document).ready(function () {
 
+
+$('.service-list-item-title').click(function(){
+    alert("prithanuka");
     
-// $('.service-list-item-title').click(function(){
-//     alert("prithanuka");
-    
-// })
+})
 
 
 $(".service-category-collection-list-item:first-child").addClass("faq-open");
