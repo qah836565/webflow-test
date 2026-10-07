@@ -165,7 +165,7 @@ $(".service-category-collection-list-item:first-child").addClass("faq-open");
 
 const serviceLinks = document.querySelectorAll('.service-tab-link');
 const serviceDetails = [ ...document.querySelectorAll('.service-details-item')];
-serviceDetail[0].classList.add('service-active');
+serviceDetails[0].classList.add('service-active');
 serviceLinks.forEach( (link) => {
 link.classList.remove('service-active');
     link.addEventListener('click', function () {
