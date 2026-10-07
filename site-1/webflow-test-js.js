@@ -156,6 +156,6 @@ $(".service-category-collection-list-item:first-child").addClass("faq-open");
 
 
 // document end //
-})
+});
 
 
