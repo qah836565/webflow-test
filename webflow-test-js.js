@@ -204,30 +204,54 @@ $(".service-category-collection-list-item:first-child").addClass("faq-open");
 
 
 
-const serviceLinks = document.querySelectorAll('.service-tab-link');
-const serviceDetails = [ ...document.querySelectorAll('.service-details-item')];
-serviceDetails[0].classList.add('service-active');
-serviceLinks.forEach( (link) => {
-link.classList.remove('service-active');
-    link.addEventListener('click', function () {
+// const serviceLinks = document.querySelectorAll('.service-tab-link');
+// const serviceDetails = [ ...document.querySelectorAll('.service-details-item')];
+// serviceDetails[0].classList.add('service-active');
+// serviceLinks.forEach( (link) => {
+// link.classList.remove('service-active');
+//     link.addEventListener('click', function () {
         
-        this.classList.add('service-active');
-        const attr = this.getAttribute('data-service');
-        const serviceDetail = serviceDetails.find(function (elem) {
-            return elem.getAttribute('data-service') === attr;
-        });
+//         this.classList.add('service-active');
+//         const attr = this.getAttribute('data-service');
+//         const serviceDetail = serviceDetails.find(function (elem) {
+//             return elem.getAttribute('data-service') === attr;
+//         });
 
-        serviceDetails.forEach(function (elem) {
-            elem.classList.remove('service-active');
-        });
+//         serviceDetails.forEach(function (elem) {
+//             elem.classList.remove('service-active');
+//         });
 
-        if (serviceDetail) {
-            serviceDetail.classList.add('service-active');
-        }
+//         if (serviceDetail) {
+//             serviceDetail.classList.add('service-active');
+//         }
 
-    });
+//     });
 
-});
+// });
+
+
+
+  function activateService($tab) {
+    var service = $tab.find("[data-service]").attr("data-service");
+
+    // Left tab active
+    $(".service-tab-link").removeClass("service-tab-active");
+    $tab.addClass("service-tab-active");
+
+    // Right content active
+    $(".service-details-item").removeClass("service-active");
+    $('.service-details-item[data-service="' + service + '"]')
+      .addClass("service-active");
+  }
+
+  // Click
+  $(".service-tab-link").on("click", function () {
+    activateService($(this));
+  });
+
+  // First item active by default
+  activateService($(".service-tab-link").first());
+
 
 // document end //
 });
