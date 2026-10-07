@@ -63,61 +63,61 @@ cssLinks.forEach(function (link) {
 
     function initSliders() {
 
-        var $universitySlider = $('.university-slider');
-        var $progress = $('.univ-sld-progress-bar .univ-sld-progress-fill');
+        // var $universitySlider = $('.university-slider');
+        // var $progress = $('.univ-sld-progress-bar .univ-sld-progress-fill');
 
 
-        if (!$universitySlider.length) {
-            return;
-        }
+        // if (!$universitySlider.length) {
+        //     return;
+        // }
 
 
         // Progress bar
-        $universitySlider.on('init beforeChange', function (e, slick, currentSlide, nextSlide) {
+        // $universitySlider.on('init beforeChange', function (e, slick, currentSlide, nextSlide) {
 
-            var i = e.type === 'init' ? 0 : nextSlide;
+        //     var i = e.type === 'init' ? 0 : nextSlide;
 
-            $progress.width(
-                ((i + 1) / slick.slideCount) * 100 + '%'
-            );
+        //     $progress.width(
+        //         ((i + 1) / slick.slideCount) * 100 + '%'
+        //     );
 
-        });
+        // });
 
 
         // Slick initialization
-        $universitySlider.slick({
+        // $universitySlider.slick({
 
-            dots: false,
+        //     dots: false,
 
-            infinite: true,
+        //     infinite: true,
 
-            arrows: true,
+        //     arrows: true,
 
-            prevArrow: '.univ-sld-btn-left',
+        //     prevArrow: '.univ-sld-btn-left',
 
-            nextArrow: '.univ-sld-btn-right',
+        //     nextArrow: '.univ-sld-btn-right',
 
-            speed: 500,
+        //     speed: 500,
 
-            slidesToShow: 3,
+        //     slidesToShow: 3,
 
-            slidesToScroll: 1,
-             responsive: [
-                 {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                 {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-                 ]
+        //     slidesToScroll: 1,
+        //      responsive: [
+        //          {
+        //             breakpoint: 992,
+        //             settings: {
+        //                 slidesToShow: 2,
+        //             }
+        //         },
+        //          {
+        //             breakpoint: 480,
+        //             settings: {
+        //                 slidesToShow: 1,
+        //             }
+        //         }
+        //          ]
 
-        });
+        // });
 
 
 
