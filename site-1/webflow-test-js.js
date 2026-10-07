@@ -1,5 +1,22 @@
-// (function () {
+(function () {
 
+
+    const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+   
+cssLinks.forEach(function (link) {
+    if (link.href.includes('webflow-test')) {
+        link.href = 'https://qah836565.github.io/webflow-test/site-1/webflow-test-style.css?v=' +
+            Date.now();
+    }
+});
+
+   // const jsLinks = document.querySelectorAll('script[type="module"]');
+   // jsLinks.forEach(function (link) {
+   // if (link.src.includes('webflow-test')) {
+   //      link.src = 'https://qah836565.github.io/webflow-test/site-1/webflow-test-js.js?v=' +
+   //         Date.now();
+   //  }
+   //   });
 
     
     // ========================================
@@ -16,27 +33,27 @@
     // LOAD SLICK
     // ========================================
 
-    // if (typeof jQuery.fn.slick === 'function') {
+     if (typeof jQuery.fn.slick === 'function') {
 
-    //     initSliders();
+        initSliders();
 
-    // } else {
+     } else {
 
-    //     var slickScript = document.createElement('script');
+        var slickScript = document.createElement('script');
 
-    //     slickScript.src =
-    //         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
+         slickScript.src =
+             'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
 
-    //     slickScript.onload = function () {
-    //         initSliders();
-    //     };
+         slickScript.onload = function () {
+             initSliders();
+         };
 
-    //     slickScript.onerror = function () {
-    //         console.error('Slick JS failed to load.');
-    //     };
+         slickScript.onerror = function () {
+             console.error('Slick JS failed to load.');
+         };
 
-    //     document.head.appendChild(slickScript);
-    // }
+         document.head.appendChild(slickScript);
+     }
 
 
 
@@ -44,120 +61,101 @@
     // YOUR SLICK CODE
     // ============================
 
-//     function initSliders() {
+    function initSliders() {
 
-//         var $universitySlider = $('.university-slider');
-//         var $progress = $('.univ-sld-progress-bar .univ-sld-progress-fill');
-
-
-//         if (!$universitySlider.length) {
-//             return;
-//         }
+        var $universitySlider = $('.university-slider');
+        var $progress = $('.univ-sld-progress-bar .univ-sld-progress-fill');
 
 
-//         // Progress bar
-//         $universitySlider.on('init beforeChange', function (e, slick, currentSlide, nextSlide) {
-
-//             var i = e.type === 'init' ? 0 : nextSlide;
-
-//             $progress.width(
-//                 ((i + 1) / slick.slideCount) * 100 + '%'
-//             );
-
-//         });
+        if (!$universitySlider.length) {
+            return;
+        }
 
 
-//         // Slick initialization
-//         $universitySlider.slick({
+        // Progress bar
+        $universitySlider.on('init beforeChange', function (e, slick, currentSlide, nextSlide) {
 
-//             dots: false,
+            var i = e.type === 'init' ? 0 : nextSlide;
 
-//             infinite: true,
+            $progress.width(
+                ((i + 1) / slick.slideCount) * 100 + '%'
+            );
 
-//             arrows: true,
-
-//             prevArrow: '.univ-sld-btn-left',
-
-//             nextArrow: '.univ-sld-btn-right',
-
-//             speed: 500,
-
-//             slidesToShow: 3,
-
-//             slidesToScroll: 1,
-//              responsive: [
-//                  {
-//                     breakpoint: 992,
-//                     settings: {
-//                         slidesToShow: 2,
-//                     }
-//                 },
-//                  {
-//                     breakpoint: 480,
-//                     settings: {
-//                         slidesToShow: 1,
-//                     }
-//                 }
-//                  ]
-
-//         });
-
-//     }
+        });
 
 
-// })();
+        // Slick initialization
+        $universitySlider.slick({
 
+            dots: false,
 
-$(document).ready(function () {
+            infinite: true,
 
-    
-    // // faq functionality //
-    // if ($(".faq-list").length) {
-    //     $(".faq-box:first-child").addClass("faq-open");
-    //     $(".faq-box").each(function () {
-    //         if ($(this).hasClass("faq-open")) {
-    //             $(this).find(".faq-btn").next(".faq-panel").show();
-    //         }
-    //     });
-    //     $(".faq-btn").on("click", function () {
-    //         $(this).parent().toggleClass("faq-open");
-    //         $(this).next(".faq-panel").stop(true, true).slideToggle();
-    //         $(this).parent().siblings().removeClass("faq-open");
-    //         $(this).parent().siblings().find(".faq-panel").slideUp();
-    //     });
-    // }
+            arrows: true,
 
+            prevArrow: '.univ-sld-btn-left',
 
-    // service item //
-// if ($(".service-category-collection-list").length) {
-//  console.log('jkmjjj');
-//     setTimeout(()=>{
+            nextArrow: '.univ-sld-btn-right',
+
+            speed: 500,
+
+            slidesToShow: 3,
+
+            slidesToScroll: 1,
+             responsive: [
+                 {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                 {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+                 ]
+
+        });
+
+    }
+
 
   
-//         $(".service-category-collection-list-item:first-child").addClass("faq-open");
-//         $(".service-category-collection-list-item").each(function () {
-//             if ($(this).hasClass("faq-open")) {
-//                 $(this).find(".service-list-item-panel").show();
-//             }
-//         });
-//         $(".service-list-item-hd-outer").on("click", function () {
-//             $(this).parent().toggleClass("faq-open");
-//             $(this).next(".service-list-item-panel").stop(true, true).slideToggle();
-//             $(this).parent().siblings().removeClass("faq-open");
-//             $(this).parent().siblings().find(".service-list-item-panel").slideUp();
-//         });
 
-//         },500);
-//     }
-
-$('.service-list-item-title').click(function(){
-    alert("prithanuka");
     
+
+})();
+
+
+
+// function end //
+
+// document start //
+
+// $(document).ready(function () {
+// $('.service-list-item-title').click(function(){
+//     alert("prithanuka");
+    
+// })
+
+
+$(".service-category-collection-list-item:first-child").addClass("faq-open");
+        $(".service-category-collection-list-item").each(function () {
+            if ($(this).hasClass("faq-open")) {
+                $(this).find(".service-list-item-panel").show();
+            }
+        });
+        $(".service-list-item-hd-outer").on("click", function () {
+            $(this).parent().toggleClass("faq-open");
+            $(this).next(".service-list-item-panel").stop(true, true).slideToggle();
+            $(this).parent().siblings().removeClass("faq-open");
+            $(this).parent().siblings().find(".service-list-item-panel").slideUp();
+        });
+
+
+// document end //
 })
 
-
-    // document end //
-
-     
-});
 
