@@ -141,6 +141,20 @@ $('.service-list-item-title').click(function(){
 })
 
 
+$(".service-category-collection-list-item:first-child").addClass("faq-open");
+        $(".service-category-collection-list-item").each(function () {
+            if ($(this).hasClass("faq-open")) {
+                $(this).find(".service-list-item-panel").show();
+            }
+        });
+        $(".service-list-item-hd-outer").on("click", function () {
+            $(this).parent().toggleClass("faq-open");
+            $(this).next(".service-list-item-panel").stop(true, true).slideToggle();
+            $(this).parent().siblings().removeClass("faq-open");
+            $(this).parent().siblings().find(".service-list-item-panel").slideUp();
+        });
+
+
 // document end //
 })
 
