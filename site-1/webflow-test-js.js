@@ -130,6 +130,10 @@ $(document).ready(function () {
 
     // service item //
 if ($(".service-category-collection-list").length) {
+
+    setTimeout(()=>{
+
+   
         $(".service-category-collection-list-item:first-child").addClass("faq-open");
         $(".service-category-collection-list-item").each(function () {
             if ($(this).hasClass("faq-open")) {
@@ -142,8 +146,16 @@ if ($(".service-category-collection-list").length) {
             $(this).parent().siblings().removeClass("faq-open");
             $(this).parent().siblings().find(".service-list-item-panel").slideUp();
         });
+
+        },500);
     }
 
-    
+
+
+
+
+    // document end //
+
+     
 });
 
