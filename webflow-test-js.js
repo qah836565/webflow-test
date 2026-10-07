@@ -23,37 +23,37 @@ cssLinks.forEach(function (link) {
     // SLICK CDN
     // ========================================
 
-    if (typeof jQuery === 'undefined') {
-        console.error('jQuery is not available.');
-        return;
-    }
+    // if (typeof jQuery === 'undefined') {
+    //     console.error('jQuery is not available.');
+    //     return;
+    // }
 
 
     // ========================================
     // LOAD SLICK
     // ========================================
 
-    if (typeof jQuery.fn.slick === 'function') {
+    // if (typeof jQuery.fn.slick === 'function') {
 
-        initSliders();
+    //     initSliders();
 
-    } else {
+    // } else {
 
-        var slickScript = document.createElement('script');
+    //     var slickScript = document.createElement('script');
 
-        slickScript.src =
-            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
+    //     slickScript.src =
+    //         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
 
-        slickScript.onload = function () {
-            initSliders();
-        };
+    //     slickScript.onload = function () {
+    //         initSliders();
+    //     };
 
-        slickScript.onerror = function () {
-            console.error('Slick JS failed to load.');
-        };
+    //     slickScript.onerror = function () {
+    //         console.error('Slick JS failed to load.');
+    //     };
 
-        document.head.appendChild(slickScript);
-    }
+    //     document.head.appendChild(slickScript);
+    // }
 
 
 
@@ -61,84 +61,82 @@ cssLinks.forEach(function (link) {
     // YOUR SLICK CODE
     // ============================
 
-    function initSliders() {
+    // function initSliders() {
 
-        var $universitySlider = $('.university-slider');
-        var $progress = $('.univ-sld-progress-bar .univ-sld-progress-fill');
-
-
-        if (!$universitySlider.length) {
-            return;
-        }
+    //     var $universitySlider = $('.university-slider');
+    //     var $progress = $('.univ-sld-progress-bar .univ-sld-progress-fill');
 
 
-        // Progress bar
-        $universitySlider.on('init beforeChange', function (e, slick, currentSlide, nextSlide) {
+    //     if (!$universitySlider.length) {
+    //         return;
+    //     }
 
-            var i = e.type === 'init' ? 0 : nextSlide;
 
-            $progress.width(
-                ((i + 1) / slick.slideCount) * 100 + '%'
-            );
+    //     // Progress bar
+    //     $universitySlider.on('init beforeChange', function (e, slick, currentSlide, nextSlide) {
 
-        });
+    //         var i = e.type === 'init' ? 0 : nextSlide;
+
+    //         $progress.width(
+    //             ((i + 1) / slick.slideCount) * 100 + '%'
+    //         );
+
+    //     });
 
 
         // Slick initialization
-        $universitySlider.slick({
+    //     $universitySlider.slick({
 
-            dots: false,
+    //         dots: false,
 
-            infinite: true,
+    //         infinite: true,
 
-            arrows: true,
+    //         arrows: true,
 
-            prevArrow: '.univ-sld-btn-left',
+    //         prevArrow: '.univ-sld-btn-left',
 
-            nextArrow: '.univ-sld-btn-right',
+    //         nextArrow: '.univ-sld-btn-right',
 
-            speed: 500,
+    //         speed: 500,
 
-            slidesToShow: 3,
+    //         slidesToShow: 3,
 
-            slidesToScroll: 1,
-             responsive: [
-                 {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                 {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-                 ]
+    //         slidesToScroll: 1,
+    //          responsive: [
+    //              {
+    //                 breakpoint: 992,
+    //                 settings: {
+    //                     slidesToShow: 2,
+    //                 }
+    //             },
+    //              {
+    //                 breakpoint: 480,
+    //                 settings: {
+    //                     slidesToShow: 1,
+    //                 }
+    //             }
+    //              ]
 
-        });
+    //     });
 
-    }
+    // }
 
 
-    // faq functionality //
-    if ($(".faq-list").length) {
-        $(".faq-box:first-child").addClass("faq-open");
-        $(".faq-box").each(function () {
-            if ($(this).hasClass("faq-open")) {
-                $(this).find(".faq-btn").next(".faq-panel").show();
-            }
-        });
-        $(".faq-btn").on("click", function () {
-            $(this).parent().toggleClass("faq-open");
-            $(this).next(".faq-panel").stop(true, true).slideToggle();
-            $(this).parent().siblings().removeClass("faq-open");
-            $(this).parent().siblings().find(".faq-panel").slideUp();
-        });
-    }
+  
 
     
 
 })();
+
+
+$(document).ready(function () {
+$('.service-list-item-title').click(function(){
+    alert("prithanuka");
+    
+})
+
+
+
+})
+
 
