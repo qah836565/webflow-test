@@ -134,7 +134,7 @@ cssLinks.forEach(function (link) {
 
 // document start //
 
-// $(document).ready(function () {
+$(document).ready(function () {
 // $('.service-list-item-title').click(function(){
 //     alert("prithanuka");
     
