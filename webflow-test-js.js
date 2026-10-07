@@ -119,7 +119,48 @@ cssLinks.forEach(function (link) {
 
         });
 
+
+
+
+
+        // review slider //
+
+        var $reviewSlider = $('.rev-sld');
+ $reviewSlider.slick({
+
+            dots: false,
+
+            infinite: true,
+
+            arrows: true,
+
+            prevArrow: '.sld-btn-left',
+
+            nextArrow: '.sld-btn-right',
+
+            speed: 500,
+
+            slidesToShow: 3,
+
+            slidesToScroll: 1,
+             responsive: [
+                 {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                 {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+                 ]
+
+        });
     }
+
 
 
   
