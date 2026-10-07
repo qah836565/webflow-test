@@ -23,10 +23,10 @@ cssLinks.forEach(function (link) {
     // SLICK CDN
     // ========================================
 
-    // if (typeof jQuery === 'undefined') {
-    //     console.error('jQuery is not available.');
-    //     return;
-    // }
+    if (typeof jQuery === 'undefined') {
+        console.error('jQuery is not available.');
+        return;
+    }
 
 
     // ========================================
