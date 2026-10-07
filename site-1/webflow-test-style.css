@@ -198,7 +198,16 @@ content:"";
     display:none;
 } */
  
-.service-list-item-panel.service-active, .service-details-item.service-active{
+
+.service-tab-link.service-active .service-list-item-panel-item-txt{
+   color:#4B7E33;
+}
+.service-tab-link.service-active .service-list-item-panel-item-img{
+    filter: brightness(0) saturate(100%) invert(40%) sepia(39%) saturate(664%) hue-rotate(57deg) brightness(96%) contrast(86%);
+}
+
+
+ .service-list-item-panel.service-active, .service-details-item.service-active{
     display:block;
 }
 .service-category-collection-list-item.faq-open .service-list-item-hd .black-circle{
@@ -211,6 +220,9 @@ content:"";
 
    display: none;
 }
+
+
+
 
 @media(min-width:1440px){
     /* .step-dotted-line {
