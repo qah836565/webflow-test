@@ -130,7 +130,7 @@ $(document).ready(function () {
 
     // service item //
 if ($(".service-category-collection-list").length) {
- console.log($('.service-category-collection-list-item').length);
+ console.log('jkmjjj');
     setTimeout(()=>{
 
   
