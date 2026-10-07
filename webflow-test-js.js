@@ -10,13 +10,13 @@ cssLinks.forEach(function (link) {
     }
 });
 
-    const jsLinks = document.querySelectorAll('script[type="module"]');
-    jsLinks.forEach(function (link) {
-    if (link.src.includes('webflow-test')) {
-        link.src = 'https://qah836565.github.io/webflow-test/site-1/webflow-test-js.js?v=' +
-            Date.now();
-    }
-});
+//     const jsLinks = document.querySelectorAll('script[type="module"]');
+//     jsLinks.forEach(function (link) {
+//     if (link.src.includes('webflow-test')) {
+//         link.src = 'https://qah836565.github.io/webflow-test/site-1/webflow-test-js.js?v=' +
+//             Date.now();
+//     }
+// });
 
     
     // ========================================
