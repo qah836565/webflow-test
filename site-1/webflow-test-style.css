@@ -34,7 +34,7 @@ z-index:0;
     top:0;
     left:0;
     width:100%;
-    height:30%;se
+    height:30%;
 background: linear-gradient(180deg, #0B0021 0%, rgba(11, 0, 33, 0) 91.76%);
 opacity: 0.56;
 z-index:2;
@@ -69,11 +69,11 @@ z-index:1;
     margin-bottom:0;
 }
 .ftr-btm-other-list-item:not(:last-child)::before{
-content:";
+content:"";
     position:absolute;
     right:0;
     top:50%;
-    transfoprm:translateY(-50%);
+    transform:translateY(-50%);
     width:1px;
     height:25px;
     background:#A8A8A8;
@@ -199,6 +199,16 @@ content:";
 }
 .service-list-item-panel.service-active, .service-details-item.service-active{
     display:block;
+}
+.service-category-collection-list-item.faq-open .service-list-item-hd .black-circle{
+    background:#4B7E33;
+}
+.service-category-collection-list-item.faq-open .service-list-item-hd .service-list-item-title{
+    color:#4B7E33;
+}
+.service-category-collection-list-item.faq-open .service-list-item-hd  .serv-list-item-arr:after{
+
+   display: none;
 }
 
 @media(min-width:1440px){
