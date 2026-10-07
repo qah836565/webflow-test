@@ -206,10 +206,8 @@ content:"";
     filter: brightness(0) saturate(100%) invert(40%) sepia(39%) saturate(664%) hue-rotate(57deg) brightness(96%) contrast(86%);
 }
 
-.service-details-item{
-    display:none;
-}
- .service-list-item-panel.service-active, .service-details-item.service-active{
+
+.service-list-item-panel.service-active, .service-details-item.service-active{
     display:block;
 }
 .service-category-collection-list-item.faq-open .service-list-item-hd .black-circle{
@@ -224,6 +222,15 @@ content:"";
 }
 
 
+.rev-sld .slick-list{
+    margin:0 -15px;
+}
+.rev-sld .slick-track{
+    display:flex !important;
+}
+.rev-sld .slick-slide{
+   height:auto !important;
+}
 
 
 @media(min-width:1440px){
