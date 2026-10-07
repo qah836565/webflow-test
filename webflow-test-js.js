@@ -161,13 +161,13 @@ $(".service-category-collection-list-item:first-child").addClass("faq-open");
 
 
 const serviceLinks = document.querySelectorAll('.service-tab-link');
-const serviceDetails = document.querySelectorAll('.service-details-item');
+const serviceDetails = [ ...document.querySelectorAll('.service-details-item')];
 
 serviceLinks.forEach( (link) => {
 
     link.addEventListener('click', function () {
         link.classList.remove('service-active');
-        this.classList.add('.service-active');
+        this.classList.add('service-active');
         const attr = this.getAttribute('data-service');
         const serviceDetail = serviceDetails.find(function (elem) {
             return elem.getAttribute('data-service') === attr;
