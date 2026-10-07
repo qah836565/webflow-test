@@ -235,8 +235,8 @@ $(".service-category-collection-list-item:first-child").addClass("faq-open");
     var service = $tab.find("[data-service]").attr("data-service");
 
     // Left tab active
-    $(".service-tab-link").removeClass("service-tab-active");
-    $tab.addClass("service-tab-active");
+    $(".service-tab-link").removeClass("service-active");
+    $tab.addClass("service-active");
 
     // Right content active
     $(".service-details-item").removeClass("service-active");
