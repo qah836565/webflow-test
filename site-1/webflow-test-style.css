@@ -206,7 +206,9 @@ content:"";
     filter: brightness(0) saturate(100%) invert(40%) sepia(39%) saturate(664%) hue-rotate(57deg) brightness(96%) contrast(86%);
 }
 
-
+.service-details-item{
+    display:none;
+}
  .service-list-item-panel.service-active, .service-details-item.service-active{
     display:block;
 }
