@@ -233,6 +233,11 @@ content:"";
 .rev-sld .slick-slide{
    height:auto !important;
 }
+.rev-sld .slick-slide.slick-center{
+background: var(--color-white);
+box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+border-radius: 2px;
+}
 
 
 @media(min-width:1440px){
