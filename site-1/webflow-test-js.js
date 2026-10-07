@@ -104,7 +104,9 @@
 
     }
 
+$(document).ready(function () {
 
+    
     // faq functionality //
     if ($(".faq-list").length) {
         $(".faq-box:first-child").addClass("faq-open");
@@ -139,19 +141,7 @@ if ($(".service-category-collection-list").length) {
     }
 
     
-    servicetablinks = document.querySelectorAll('.service-tab-link');
-    servicetabs = document.querySelectorAll('.service-details-item');
-
-    servicetablinks.forEach((link, i) => {
-        link.addEventListener('click', function () {
-            servicetabs.forEach((tab, j) => {
-                if (i === j) {
-                    tab.classList.add('servicetab-active');
-                }
-            });
-        });
-
-    });
+});
 
     
 
