@@ -167,7 +167,7 @@ serviceLinks.forEach( (link) => {
 
     link.addEventListener('click', function () {
         link.classList.remove('service-active');
-        this.addClass('.service-active');
+        this.classList.add('.service-active');
         const attr = this.getAttribute('data-service');
         const serviceDetail = serviceDetails.find(function (elem) {
             return elem.getAttribute('data-service') === attr;
