@@ -2,16 +2,18 @@
 
 
     const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
-    const jsLinks = document.querySelectorAll('script[type="module"]');
+   
 cssLinks.forEach(function (link) {
     if (link.href.includes('webflow-test')) {
         link.href = 'https://qah836565.github.io/webflow-test/site-1/webflow-test-style.css?v=' +
             Date.now();
     }
 });
+
+    const jsLinks = document.querySelectorAll('script[type="module"]');
     jsLinks.forEach(function (link) {
-    if (link.href.includes('webflow-test')) {
-        link.href = 'https://qah836565.github.io/webflow-test/site-1/webflow-test-js.js?v=' +
+    if (link.src.includes('webflow-test')) {
+        link.src = 'https://qah836565.github.io/webflow-test/site-1/webflow-test-js.js?v=' +
             Date.now();
     }
 });
