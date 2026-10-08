@@ -242,7 +242,14 @@ border-radius: 2px;
 .serv-details-collection-list-item:last-child, .key-benefits-list-item:last-child{
     margin-bottom:0px;
 }
-
+.serv-details-collection-list-item:nth-child(even) .serv-dtls-left
+{
+order:2;
+}
+.serv-details-collection-list-item:nth-child(even) .serv-dtls-right
+{
+order:1;
+}
 
 @media(min-width:1440px){
     /* .step-dotted-line {
