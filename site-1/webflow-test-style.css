@@ -242,11 +242,11 @@ border-radius: 2px;
 .serv-details-collection-list-item:last-child, .key-benefits-list-item:last-child, .row.serv-dtls-row:last-child{
     margin-bottom:0px;
 }
-.serv-details-collection-list-item:nth-child(even) .serv-dtls-left
+.serv-details-collection-list-item:nth-child(even) .serv-dtls-left, .row.serv-dtls-row:last-child:nth-child(even) .serv-dtls-left
 {
 order:2;
 }
-.serv-details-collection-list-item:nth-child(even) .serv-dtls-right
+.serv-details-collection-list-item:nth-child(even) .serv-dtls-right, .row.serv-dtls-row:last-child:nth-child(even) .serv-dtls-right
 {
 order:1;
 }
