@@ -31,7 +31,8 @@ function loadFinsweetFilter() {
         var finsweetScript = document.createElement('script');
 
         finsweetScript.src =
-            'https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js';
+            'https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js';
+
 
         finsweetScript.async = true;
 
