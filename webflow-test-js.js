@@ -10,6 +10,7 @@ cssLinks.forEach(function (link) {
     }
 });
 
+
    // const jsLinks = document.querySelectorAll('script[type="module"]');
    // jsLinks.forEach(function (link) {
    // if (link.src.includes('webflow-test')) {
@@ -19,6 +20,38 @@ cssLinks.forEach(function (link) {
    //   });
 
     
+function loadFinsweetFilter() {
+
+        if (window.fsAttributes) {
+            return;
+        }
+
+        window.fsAttributes = window.fsAttributes || [];
+
+        var finsweetScript = document.createElement('script');
+
+        finsweetScript.src =
+            'https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js';
+
+        finsweetScript.async = true;
+
+        finsweetScript.onload = function () {
+            console.log('Finsweet CMS Filter loaded.');
+        };
+
+        finsweetScript.onerror = function () {
+            console.error('Finsweet CMS Filter failed to load.');
+        };
+
+        document.head.appendChild(finsweetScript);
+    }
+
+    loadFinsweetFilter();
+
+
+
+
+
     // ========================================
     // SLICK CDN
     // ========================================
