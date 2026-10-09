@@ -34,7 +34,10 @@ function loadFinsweetFilter() {
             'https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js';
 
 
+ finsweetScript.type = 'module';
         finsweetScript.async = true;
+
+finsweetScript.setAttribute('fs-list', '');
 
         finsweetScript.onload = function () {
             console.log('Finsweet CMS Filter loaded.');
