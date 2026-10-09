@@ -251,6 +251,12 @@ order:2;
 order:1;
 }
 
+.pgn-cmn-btn.is-list-pagination-disabled{
+ display:none;
+}
+
+
+
 @media(min-width:1440px){
     /* .step-dotted-line {
     top: 27.4%;
