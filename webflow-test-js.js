@@ -38,6 +38,7 @@ function loadFinsweetFilter() {
         finsweetScript.async = true;
 
 finsweetScript.setAttribute('fs-list', '');
+finsweetScript.setAttribute('fs-toc', '');
 
         finsweetScript.onload = function () {
             console.log('Finsweet CMS Filter loaded.');
