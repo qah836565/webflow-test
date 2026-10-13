@@ -255,7 +255,10 @@ order:1;
  display:none;
 }
 
-
+.pgn-btn.w--current{
+background:var(--color-purple);
+color:var(--color-white);
+}
 
 @media(min-width:1440px){
     /* .step-dotted-line {
