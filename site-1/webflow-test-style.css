@@ -260,6 +260,11 @@ background:var(--color-purple);
 color:var(--color-white);
 }
 
+.rq-smp-inp.rq-smp-txt.w-input{
+    height:156px;
+}
+
+
 @media(min-width:1440px){
     /* .step-dotted-line {
     top: 27.4%;
